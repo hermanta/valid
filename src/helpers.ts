@@ -26,7 +26,7 @@ export default async function serveResult(request: Request): Promise<Response> {
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, HEAD',
-      'Cache-Control': 'public, max-age=43200, proxy-revalidate, immutable',
+      'Cache-Control': 'max-age=40, proxy-revalidate, immutable',
       'Content-Type': 'application/json; charset=utf-8',
     }
   });
