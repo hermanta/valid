@@ -10,8 +10,6 @@ export default async function serveResult(request: Request): Promise<Response> {
     if (dc === null || dc === 'true') {
       result.name = decodeURIComponent(result.name);
     }
-  } else if (result.name === undefined || (!result.name && result.success)) {
-    result = { success: false, message: 'Not found' };
   }
   if (result.message === 'Bad request') {
     code = 400;

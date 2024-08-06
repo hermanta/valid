@@ -7,10 +7,10 @@ export default async function callAPI(request: Request): Promise<Result> {
   const params = url.searchParams;
   const id = params.get('id');
   const zone = params.get('zone');
+  if (!id) {
+    return { success: false, message: 'Bad request' };
+  }
   try {
-    if (!id) {
-  return { success: false, message: 'Bad request' };
-    }
     let result: Result;
     switch (true) {
       case path.includes('/ff'):
