@@ -10,6 +10,7 @@ export default async function callAPI(request: Request): Promise<Result> {
   try {
     if (!id) {
   return { success: false, message: 'Bad request' };
+    }
     let result: Result;
     switch (true) {
       case path.includes('/ff'):
