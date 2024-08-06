@@ -26,6 +26,7 @@ export default async function serveResult(request: Request): Promise<Response> {
       'Age': 0,
       'CF-Cache-Status': 'MISS',
       'Cache-Control': 'max-age=40, proxy-revalidate, immutable',
+      'Content-Length': Number(JSON.stringify(result).length),
       'Content-Type': 'application/json; charset=utf-8',
       'X-Powered-By': '@ihsangan/valid'
     }
