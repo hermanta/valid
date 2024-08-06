@@ -14,7 +14,7 @@ export default async function callAPI(request: Request): Promise<Result> {
     let result: Result;
     switch (true) {
       case path.includes('/ff'):
-        result = await router.ff(id);
+        result = await router.ff(Number(id));
         break;
       case path.includes('/ml'):
         result = await router.ml(id, zone);
