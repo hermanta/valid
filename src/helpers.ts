@@ -23,8 +23,11 @@ export default async function serveResult(request: Request): Promise<Response> {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, HEAD',
       'Access-Control-Expose-Headers': 'X-Response-Time',
+      'Age': 0,
+      'CF-Cache-Status': 'MISS',
       'Cache-Control': 'max-age=40, proxy-revalidate, immutable',
       'Content-Type': 'application/json; charset=utf-8',
+      'X-Powered-By': '@ihsangan/valid'
     }
   });
   return response;
